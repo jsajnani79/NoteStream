@@ -2,7 +2,7 @@ Template.documents_create.events({
   'submit form': function(e){
     e.preventDefault()
     var oFReader = new FileReader()
-    var _id = Documents.insert({encodedImg: []})
+    var _id = Documents.insert({name: $('.name').val(), description: $('.description').val(),encodedImg: []})
 
     _.each(document.getElementById("uploadImage").files, function(val, index){
       setTimeout(function(){
