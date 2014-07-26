@@ -1,5 +1,5 @@
 Meteor.publish('documentsOwned', function() {
-    return Documents.find({createdBy: this.userId});
+  return Documents.find({createdBy: this.userId});
 });
 
 Meteor.publish('documentsContributing', function() {
