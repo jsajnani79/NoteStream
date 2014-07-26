@@ -1,0 +1,14 @@
+
+<template name="welcome">
+  <p>Welcome to the class {{class_name}}</p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}}<br>
+  {{/each}}
+</template>
+
+<template name="message_input">
+  <p>Message: <input type="text" id="message"></p>
+</template>
