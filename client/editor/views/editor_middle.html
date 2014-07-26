@@ -3,7 +3,10 @@
 
   {{#each images}}
     <div class="row">
-      <img src="{{this}}"/>
+      <div class="drawContainer">
+        <img src="{{this}}"/>
+        <canvas></canvas>
+      </div>
     </div>
   {{/each}}
 

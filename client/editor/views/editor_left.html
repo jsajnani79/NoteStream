@@ -1,6 +1,6 @@
 <template name="editor_left">
   <h4>left hand editor</h4>
-  {{#each document}}
-    <a></a>
+  {{#each documents}}
+    <a href= '/editor/{{_id}}'>{{name}}</a>
   {{/each}}
 </template>
