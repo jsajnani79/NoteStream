@@ -27,7 +27,7 @@ Documents = new Meteor.Collection("documents", {
           min: 0
         },
         encodedImg: {
-          type: String
+          type: [String]
         }
     }
 });
