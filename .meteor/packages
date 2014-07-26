@@ -6,3 +6,7 @@
 standard-app-packages
 autopublish
 insecure
+accounts-base
+bootstrap
+underscore
+iron-router
