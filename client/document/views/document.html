@@ -1,5 +1,7 @@
 <template name="document">
   <div>title- {{title}}</div>
   <div>description- {{description}}</div>
+  <div>contributors- {{contributors}}</div>
+  <a href="{{pathFor 'documents_edit'}}">Edit</a>
   <img src="{{encodedImg}}"/>
 </template>
