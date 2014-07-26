@@ -1,9 +1,5 @@
 Notes = new Meteor.Collection("reviews", {
     schema: {
-        role: {
-            type: String,
-            label: "teacher, or student",
-        },
         documentId: {
             type: String,
             label: "Associate docuemnt ID"
