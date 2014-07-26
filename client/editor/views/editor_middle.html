@@ -1,7 +1,10 @@
 <template name="editor_middle">
-  {{_id}}
+  <h4>middle editor</h4>
+
   {{#each images}}
-    <img src="{{this}}"/>
+    <div class="row">
+      <img src="{{this}}"/>
+    </div>
   {{/each}}
 
 </template>
