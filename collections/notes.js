@@ -1,4 +1,4 @@
-Notes = new Meteor.Collection("reviews", {
+Notes = new Meteor.Collection("notes", {
     schema: {
         documentId: {
             type: String,
@@ -15,7 +15,17 @@ Notes = new Meteor.Collection("reviews", {
         sharedWith: {
           type: [String],
           label: "Shared with what users"
-        }
+        },
+        textNote: {
+          type: String,
+          label: "text note",
+          optional: true
+        },
+        imageNote: {
+          type: String,
+          label: "image note",
+          optional: true
+        },
     }
 });
 
