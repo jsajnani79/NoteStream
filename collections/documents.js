@@ -25,6 +25,9 @@ Documents = new Meteor.Collection("documents", {
           type: Number,
           label: "Number of votes per member",
           min: 0
+        },
+        encodedImg: {
+          type: String
         }
     }
 });

@@ -1,4 +1,4 @@
-Template.document_create.events({
+Template.documents_create.events({
   'submit form': function(e){
     e.preventDefault()
     var oFReader = new FileReader()
@@ -6,7 +6,7 @@ Template.document_create.events({
     oFReader.onload =  function(fEvent){
       $('#uploadPreview').attr('src', fEvent.target.result);
       $('#base').text(fEvent.target.result);
-      Assignments.insert(encodedImg: fEvent.target.result);
+      Documents.insert({encodedImg: fEvent.target.result});
     }
 
     oFReader.readAsDataURL(document.getElementById("uploadImage").files[0])
