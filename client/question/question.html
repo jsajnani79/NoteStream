@@ -1,0 +1,10 @@
+
+<template name="questions">
+  {{#each questions}}
+    <strong>{{name}}:</strong> {{question}}<br>
+  {{/each}}
+</template>
+
+<template name="question_input">
+  <p>question: <input type="text" id="question"></p>
+</template>
