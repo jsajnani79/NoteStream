@@ -11,3 +11,9 @@ Template.editor_left.helpers({
     return Documents.find()
   }
 });
+
+Template.editor_right.helpers({
+	notes: function() {
+		return Notes.find()
+	}
+})
