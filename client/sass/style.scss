@@ -2,6 +2,19 @@
   background-color: gray;
 }
 
+.drawContainer {
+  position:relative;
+}
+
 img {
   width: 500px;
+  height: 375px;
+  z-index:0;
+}
+
+.drawObj {
+  z-index:100;
+  position:absolute;
+  width: 500px;
+  height: 375px;
 }
