@@ -1,14 +1,38 @@
 <template name="question_slide">
+testing
 {{#if document_loaded }}
-   <div id="question_slide" class="sb-slidebar sb-right">
+  <div id="question_slide" class="sb-slidebar sb-right">
   <h3>Please enter your questions here</h3>
   {{#each questions}}
-    <strong>{{ text }}:</strong> {{question}}<br>
+    {{> question_entry}}
   {{/each}}
+
+  {{#if selected_name}}
+  <div class="details">
+    <div class="name">{{selected_name}}</div>
+    <input type="button" class="inc" value="Vote this question up" />
+  </div>
+  {{else}}
+    <div class="none">Click a question to select</div>
+  {{/if}}
+
   {{> question_input}}
-</div>
+  </div>
 {{/if}}
 </template>
+
+
+<template name="question_entry">
+<div class="questions_container">
+  <div class="row-fluid question {{selected}}">
+    <div class="name col span8">{{text}}</div>
+    <div class="score col span1">{{vote}}</div>
+    <div class="col span1"><i class="icon-arrow-up inc" data-id="{{_id}}"></i></div>
+    <div class="col span1"><i class="icon-ok done" data-id="{{_id}}"></i></div>
+  </div>
+</div>
+</template>
+
 
 <template name="question_input">
   <p>question: <input type="text" id="question"></p>
