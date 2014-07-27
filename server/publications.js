@@ -7,8 +7,8 @@ Meteor.publish('documentsContributing', function() {
     return Documents.find({contributors: this.userId});
 });
 
-Meteor.publish('aNote', function(noteId) {
-    return Notes.find({_id: noteId});
+Meteor.publish('chatOfDocument', function(documentId) {
+    return Messages.find({documentId: documentId});
 });
 
 Meteor.publish('ownedNotesOfDocument', function(documentId) {
