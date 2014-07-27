@@ -1,12 +1,13 @@
 <template name="editor_middle">
   <h4>middle editor</h4>
-  {{#each images}}
-    <div class="row">
-      <div class="drawContainer">
+
+  <div class="row">
+    <div class="drawContainer">
+      {{#each encodedImg}}
         <canvas  class="drawObj"></canvas>
         <img src="{{this}}"/>
-      </div>
+      {{/each}}
     </div>
-  {{/each}}
+  </div>
 
 </template>

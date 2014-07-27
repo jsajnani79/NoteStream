@@ -1,8 +1,9 @@
 <template name="document">
   <div>title- {{name}}</div>
   <div>description- {{description}}</div>
+  <div>contributors- {{contributors}}</div>
+  <a href="{{pathFor 'documents_edit'}}">Edit</a>
   {{#each encodedImg}}
     <img src="{{this}}"/>
   {{/each}}
-
 </template>
