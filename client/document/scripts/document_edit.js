@@ -1,4 +1,4 @@
-Template.postEdit.events({
+Template.documents_edit.events({
   'submit form': function(e) {
     e.preventDefault();
 
@@ -13,8 +13,6 @@ Template.postEdit.events({
     Documents.update(currentDocumentId, {$set: documentProperties}, function(error) {
       if (error) {
         alert(error.reason);
-      } else {
-        Router.go('postPage', {_id: currentDocumentId});
       }
     });
   },
