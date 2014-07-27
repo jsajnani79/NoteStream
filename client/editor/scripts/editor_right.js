@@ -1,8 +1,8 @@
 Template.aceEditor.rendered = function() {
   //console.log(this.data._id);
-  console.log('render');
-  //editor = ace.edit("aceEditor"+this.data._id);
-  editor = ace.edit("aceEditor");
+ 
+  editor = ace.edit("aceEditor"+this.data._id);
+  // editor = ace.edit("aceEditor");
   editor.setTheme("ace/theme/xcode");
   editor.getSession().setMode("ace/mode/css");
   editor.setHighlightActiveLine(true);
@@ -25,7 +25,8 @@ Template.editor_right.rendered = function() {
 }
 
 Template.editor_right.notes = function () {
-  return Notes.find({}, { sort: { modifiedAt: -1 }})
+  return Notes.find({})
+  // return Notes.find({}, { sort: { modifiedAt: -1 }})
 };
 
 Template.aceEditor.events = {
