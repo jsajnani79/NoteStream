@@ -21,3 +21,16 @@
       </div>
     </div>  
 </template>
+
+<body>
+  {{> aceEditor}}
+</body>
+
+<template name="aceEditor">
+	<!-- for each person on doc -->
+	<!-- show name, icon, dropdown for language choice -->
+	<div id='aceEditor'>
+		<!-- add saved text -->
+    {{this.textNote}}
+	</div>
+</template>

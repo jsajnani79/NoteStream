@@ -2,7 +2,7 @@ Notes = new Meteor.Collection("notes", {
     schema: {
         documentId: {
           type: String,
-          label: "Associate docuemnt ID"
+          label: "Associate document ID"
         },
         createdBy: {
           type: String,

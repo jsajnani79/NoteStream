@@ -4,7 +4,8 @@
     "basePackages": {
       "iron-router": {},
       "accounts-ui-bootstrap-dropdown": {},
-      "sass": {}
+      "sass": {},
+      "ace-embed": {}
     },
     "packages": {
       "iron-router": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/particle4dev/meteor-sass.git",
         "tag": "v0.1.7",
         "commit": "b41757f87475186b1485ec54a819d6e027ee3d88"
+      },
+      "ace-embed": {
+        "git": "https://github.com/stuartfenton/meteor-ace-embed.git",
+        "tag": "v0.0.4",
+        "commit": "027b0e1b0d06111b51a713f04a8b8750fdcbd289"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
