@@ -5,8 +5,9 @@
     <div class="col span8">
       <h2>Your Current Files/Projects: </h2>
       {{#each documents }}
-      <a href= '/editor/{{_id}}'>{{name}}</a>
-      <br>
+        {{> lecture_tile}}
+      <!-- a href= '/editor/{{_id}}'>{{name}}</a>
+      <br> -->
       {{/each}}
     </div>
 
