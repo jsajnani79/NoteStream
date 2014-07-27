@@ -15,16 +15,13 @@
         </div>
         <div id="collapse{{this._id}}" class="accordion-body collapse in">
           <div class="accordion-inner">
-            {{this.textNote}}
+            {{> aceEditor}}
+            <!-- {{this.textNote}} -->
           </div>
         </div>
       </div>
     </div>  
 </template>
-
-<body>
-  {{> aceEditor}}
-</body>
 
 <template name="aceEditor">
 	<!-- for each person on doc -->
