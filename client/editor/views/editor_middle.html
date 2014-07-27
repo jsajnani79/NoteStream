@@ -1,11 +1,10 @@
 <template name="editor_middle">
   <h4>middle editor</h4>
-  
   {{#each images}}
     <div class="row">
       <div class="drawContainer">
+        <canvas  class="drawObj"></canvas>
         <img src="{{this}}"/>
-        <canvas class="drawObj"></canvas>
       </div>
     </div>
   {{/each}}
