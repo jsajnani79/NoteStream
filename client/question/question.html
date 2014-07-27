@@ -1,8 +1,13 @@
-
-<template name="questions">
+<template name="question_slide">
+{{#if document_loaded }}
+   <div id="question_slide" class="sb-slidebar sb-right">
+  <h3>Please enter your questions here</h3>
   {{#each questions}}
-    <strong>{{name}}:</strong> {{question}}<br>
+    <strong>{{ text }}:</strong> {{question}}<br>
   {{/each}}
+  {{> question_input}}
+</div>
+{{/if}}
 </template>
 
 <template name="question_input">
