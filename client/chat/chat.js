@@ -4,7 +4,7 @@
 
 
 Template.chat_slide.document_loaded = function () {
-  if (Session.get('documentId').length > 0 ) {
+  if (Session.get('documentId')) {
     return true;
   } else {
     return false;
@@ -24,8 +24,8 @@ Template.chat_slide.document = function () {
 }
 
 
-Template.messages.messages = function (documentId) {
-  return Messages.find({documentId : documentId}, { sort: { time: -1 }});
+Template.messages.messages = function () {
+  return Messages.find({documentId : Session.get('documentId')}, { sort: { time: -1 }});
 }
 
 
