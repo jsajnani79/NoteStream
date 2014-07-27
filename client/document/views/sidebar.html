@@ -1,0 +1,37 @@
+<template name="sidebar">
+		<a href="#" class="sidebar-toggle">Sidebar</a>
+
+    <div>
+    <aside id="westPanel" class="ui sidebar">
+<!--       class="sidebar desktop" id="chat_slide" >
+ -->     {{#each documents}}
+        <a href= '/editor/{{_id}}'>{{name}}</a>
+     {{/each}}
+   </aside>
+    </div>
+		<!-- <div class="sidebar desktop">
+      <div id="filterFieldContainer">
+        <input id="categoryFilter" type="search" class="filter-field" placeholder="Search Topics">
+      </div>
+      <div id="difficultyFilterContainer">
+        <label>Filter Difficulty</label></br>
+        <input type="checkbox" id="Beginner" value="Beginner" {{ checkBeginnerFilter }}/><label for="Beginner"> Beginner</label></br>
+        <input type="checkbox" id="Intermediate" value="Intermediate" {{ checkIntermediateFilter }}/><label for="Intermediate"> Intermediate</label></br>
+        <input type="checkbox" id="Advanced" value="Advanced" {{ checkAdvancedFilter }}/><label for="Advanced"> Advanced</label></br>
+      </div>
+        {{#if isSubMenu }}
+        <ul id="categoryList">
+          <li class="home"><a href="/">x</a>{{ currentParent }}</li>
+          <li style="text-transform:none; font-size:14px;">More Filters:</li>
+          {{#each postCategories}}
+            {{> sidebar_item }}
+          {{/each}}
+        {{else}}
+        <ul id="categoryList">
+          {{#each categories}}
+            {{> sidebar_item}}
+          {{/each}}
+        {{/if }}
+      </ul>
+		</div> -->
+</template>

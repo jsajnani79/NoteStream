@@ -1,5 +1,5 @@
 .col {
-  //background-color: white;
+  background-color: white;
 }
 
 .drawContainer {
@@ -38,4 +38,13 @@ img {
 
 .done {
   cursor: pointer;
+}
+
+//Editor right
+.docListItem {
+  list-style-type: none
+}
+
+.active {
+  color: blue
 }

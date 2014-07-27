@@ -1,10 +1,12 @@
 <template name="layout">
-  <div class="container">
-      {{> header}}
-      {{> chat_slide}}
-      {{> question_slide}}
-    <div id="main" class="row-fluid">
-      {{> yield}}
-    </div>
-  </div>
+  <div id="sb-site">
+	  <div class="container">
+	    {{> header}}
+	      {{> chat_slide}}
+	      {{> question_slide}}
+	    <div id="main" class="row-fluid">
+	      {{> yield}}
+	   </div>
+	</div>
+</div>
 </template>
