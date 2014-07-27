@@ -5,14 +5,16 @@ Template.documents_edit.events({
     var currentDocumentId = this._id;
 
     var documentProperties = {
-      title: $(e.target).find('[name=title').val(),
-      description: $(e.target).find('[name=description').val(),
-      contributores: $(e.target).find('name=contributors').val()
+      title: $(e.target).find('[name=title]').val(),
+      description: $(e.target).find('[name=description]').val(),
+      contributores: $(e.target).find('[name=contributors]').val()
     }
 
     Documents.update(currentDocumentId, {$set: documentProperties}, function(error) {
       if (error) {
         alert(error.reason);
+      } else {
+        Router.go('documents_index')
       }
     });
   },
@@ -22,7 +24,7 @@ Template.documents_edit.events({
 
     if (confirm("Delete this post?")) {
       var currentDocumentId = this._id;
-      Documents.remove(currentDocumentId);
+      Documents.remove({ _id: currentDocumentId});
       Router.go('documents_index')
     }
   },
