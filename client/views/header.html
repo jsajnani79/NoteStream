@@ -1,4 +1,5 @@
 <template name="header">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <br>
   <header class="navbar">
     <div class="navbar-inner">
@@ -8,10 +9,14 @@
 
       <ul class="nav pull-right">
       {{#if document_loaded }}
-        <li><a href="#" id="toggle_chat">chat</a></li>
-        <li><a href="#" id="toggle_question">question</a></li>
+        <!-- <li><a href="#" id="sb-toggle-left">chat</a></li> -->
+        <!-- <li><a href="#" id="toggle_question">question</a></li> -->
+        <!-- <ul> -->
+        <!-- <li class="sb-toggle-left btn">Doc/Chat</li> -->
+        <!-- <br> -->
+        <!-- <li class="sb-toggle-right btn">Questions</li> -->
+      <!-- </ul> -->
       {{/if}}
-
         <li>{{> loginButtons}}</li>
       </ul>
     </div>

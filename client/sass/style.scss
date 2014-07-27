@@ -1,5 +1,5 @@
 .col {
-  //background-color: white;
+  background-color: white;
 }
 
 .drawContainer {
@@ -30,6 +30,7 @@ img {
 
 .questions_container {
   padding-left:10px;
+  background-color: #0099FF;
 }
 
 .inc {
@@ -38,4 +39,13 @@ img {
 
 .done {
   cursor: pointer;
+}
+
+//Editor right
+.docListItem {
+  list-style-type: none
+}
+
+.active {
+  color: blue
 }

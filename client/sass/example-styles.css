@@ -2,18 +2,18 @@ html {
 	font-family: sans-serif;
 }
 
-body {
+/*body {
 	background-color: #222222;
-}
+}*/
 
 #sb-site, .sb-site-container {
 	padding: 14px;
 }
 
-.sb-slidebar {
+/*.sb-slidebar {
 	padding: 14px;
 	color: #fff;
-}
+}*/
 
 html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close {
 	cursor: pointer;

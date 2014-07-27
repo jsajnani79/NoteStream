@@ -1,6 +1,12 @@
 <template name="editor_left">
-  <h4>left hand editor</h4>
-  {{#each documents}}
-    <a href= '/editor/{{_id}}'>{{name}}</a>
-  {{/each}}
+    <h4>Documents</h4>
+    <ul class="nav nav-pills nav-stacked">
+		{{#each documents}}
+	   		{{> docListItem}}
+		{{/each}}	
+	</ul>
+</template>
+
+<template name="docListItem">
+	   <li class="docListItem {{cssClass}}"> <a href= '/editor/{{_id}}'>{{name}}</a></li>
 </template>
