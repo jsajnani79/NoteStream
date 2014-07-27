@@ -13,10 +13,14 @@
             {{this.createdBy}}
           </a>
         </div>
-        <div id="collapse{{this._id}}" class="accordion-body collapse in">
+        <div id="collapse{{this._id}}" class="accordion-body collapse in" >
           <div class="accordion-inner">
+            <!-- {{Meteor.userId() === }} -->
+            {{#if owns_doc}}
             {{> aceEditor}}
-            <!-- {{this.textNote}} -->
+            {{else}}
+            {{this.textNote}}
+            {{/if}}
           </div>
         </div>
       </div>
@@ -26,7 +30,8 @@
 <template name="aceEditor">
 	<!-- for each person on doc -->
 	<!-- show name, icon, dropdown for language choice -->
-	<div id='aceEditor'>
+	<!-- <div id='aceEditor{{this._id}}' class='aceEditor' data-id='{{this._id}}'> -->
+  <div id='aceEditor' class='aceEditor' data-id='{{this._id}}'>
 		<!-- add saved text -->
     {{this.textNote}}
 	</div>

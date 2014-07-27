@@ -2,7 +2,7 @@ if (Notes.find().count() === 0) {
 	Notes.insert({
 		documentID: "zNQYBtAuDxaiBncAy",
 		createdBy: "sue",
-		// createdAt: ,
+		modifiedAt: Date.now(),
 		sharedWith: ["joe", "tim", "kelly"],
 		textNote: "This is a note",
 	});
