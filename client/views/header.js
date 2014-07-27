@@ -14,9 +14,19 @@ Template.header.class_name = function() {
   return doc.name;
 }
 
+Template.header.document_loaded = function () {
+  if (Session.get('documentId')) {
+    console.log('I got docmentId', Session.get('documentId'))
+    return true;
+  } else {
+    console.log('I dont have id');
+    return false;
+  }
+}
 
 Template.home.helpers({
   documents: function(){
     return Documents.find()
   }
 });
+
