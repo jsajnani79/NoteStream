@@ -1,5 +1,8 @@
 <template name="document">
-  <div>title- {{title}}</div>
+  <div>title- {{name}}</div>
   <div>description- {{description}}</div>
-  <img src="{{encodedImg}}"/>
+  {{#each encodedImg}}
+    <img src="{{this}}"/>
+  {{/each}}
+
 </template>

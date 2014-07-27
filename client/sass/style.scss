@@ -1,6 +1,21 @@
 .col {
   background-color: gray;
-  img {
-    width: 500px;
-  }
+}
+
+.drawContainer {
+  position:relative;
+  text-align: center;
+}
+
+img {
+  width: 500px;
+  height: 375px;
+  z-index:0;
+}
+
+.drawObj {
+  z-index:100;
+  position:absolute;
+  width: 500px;
+  height: 375px;
 }
