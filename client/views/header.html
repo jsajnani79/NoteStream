@@ -7,8 +7,10 @@
       </ul>
 
       <ul class="nav pull-right">
+      {{#if document_loaded }}
         <li><a href="#" id="toggle_chat">chat</a></li>
         <li><a href="#" id="toggle_question">question</a></li>
+        {{/if}}
         <li>{{> loginButtons}}</li>
       </ul>
     </div>
