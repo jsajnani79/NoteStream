@@ -1,8 +1,8 @@
 Notes = new Meteor.Collection("notes", {
     schema: {
         documentId: {
-            type: String,
-            label: "Associate docuemnt ID"
+          type: String,
+          label: "Associate docuemnt ID"
         },
         createdBy: {
           type: String,
@@ -45,4 +45,3 @@ Notes.allow({
     else return false;
   }
 });
-
