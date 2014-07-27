@@ -1,12 +1,13 @@
 <template name="editor">
   <div class="row">
-    <div class="span2">
+    {{> chat_slide}}
+    <div class="col span2">
       {{> editor_left}}
     </div>
-    <div class="span6">
+    <div class="col span6">
       {{> editor_middle}}
     </div>
-    <div class="span4">
+    <div class="col span4">
       {{> editor_right}}
     </div>
   </div>
