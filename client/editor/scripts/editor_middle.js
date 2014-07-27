@@ -7,10 +7,11 @@ var paint;
 
 var saveCanvas = function(e){
   var _id = $('assignment').attr('id')
-
 };
 
-var redraw = function(){
+var redraw = function(e){
+  context = e.target.getContext('2d');
+
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   context.strokeStyle = "#df4b26";
   context.lineJoin = "round";
@@ -56,17 +57,15 @@ Template.editor_middle.events({
   'mousemove canvas': function(e){
     var x = $(e.target).offset().left;
     var y = $(e.target).offset().top;
-    console.log(x, y)
-
     if(paint){
-      console.log('hi')
-      addClick(e.pageX - x, e.pageY - y, true);
-      redraw();
+      addClick((e.clientX - x)/2, (e.clientY - y)/2, true);
+      redraw(e);
     }
-  }
+  },
+  'click .next': function(){
+
+  },
+  'click .back': function(){
+
+  },
 });
-// $('body').on('mousemove', function(e){
-//     var x = $(e.target).offset().left;
-//     var y = $(e.target).offset().top;
-//     console.log(e.pageX - x, e.pageY - y)
-// })

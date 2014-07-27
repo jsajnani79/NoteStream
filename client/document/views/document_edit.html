@@ -1,0 +1,41 @@
+<template name="documents_edit">
+  <form class="main">
+    <div class="control-group">
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input name="name" type="text" value="{{name}}" placeholder="Name"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+        <input name="description" type="text" value="{{description of document}}" placeholder="Description"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="name">Contributors</label>
+      <div class="controls">
+        <input name="contributors" type="text" value="{{contributors}}" placeholder="Contributors"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" value="Submit" class="btn btn-primary submit">
+      </div>
+    </div>
+
+    <form action="submit">
+      <input type="file" accept="image/*" id="uploadImage" capture="camera">
+      <button class="edit">Upload Assignment</button>
+    </form>
+
+    <div class="control-group">
+      <div class="controls">
+        <a class="btn ctn-danger delete" href="#">Delete post</a>
+      </div>
+    </div>
+  </form>
+</template>
