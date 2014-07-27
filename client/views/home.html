@@ -1,15 +1,17 @@
 <template name="home">
 <div class="container">
   <div id="main" class="row-fluid">
-    <div class="col span4">
-      <h2>Here is a list of all your files/projects</h2>
+  
+    <div class="col span8">
+      <h2>Your Current Files/Projects: </h2>
       {{#each documents }}
       <a href= '/editor/{{_id}}'>{{name}}</a>
       <br>
       {{/each}}
     </div>
+
     <div class="col span4">
-      <a href='/documents_create'>make a new document</a>
+      <a class="btn" href='/documents_create'>Upload a New Document</a>
     </div>
 
   </div>
