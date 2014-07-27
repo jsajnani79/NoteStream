@@ -1,6 +1,6 @@
 /* -----------------------------------
  * Slidebars
- * Version 0.10.2
+ * Version 0..10
  * http://plugins.adchsm.me/slidebars/
  *
  * Written by Adam Smith
@@ -46,9 +46,8 @@ body {
 	position: relative; /* Required for static Slidebars to function properly. */
 }
 
-/* Site scroll locking - prevent site from scrolling when a Slidebar is open, except when static Slidebars are only available. */
 html.sb-scroll-lock.sb-active:not(.sb-static) {
-	overflow: hidden;
+	overflow: hidden; /* Prevent site from scrolling when a Slidebar is open, except when static Slidebars are only available. */
 }
 
 /* ----------
@@ -74,7 +73,7 @@ html.sb-scroll-lock.sb-active:not(.sb-static) {
 	top: 0;
 	z-index: 0; /* Slidebars sit behind sb-site. */
 	display: none; /* Initially hide the Slidebars. Changed from visibility to display to allow -webkit-overflow-scrolling. */
-	background-color: #CFDBC5; /* Default Slidebars background colour, overwrite this with your own css. */
+	background-color: #222222; /* Default Slidebars background colour, overwrite this with your own css. */
 	-webkit-transform: translate(0px); /* Fixes issues with translated and z-indexed elements on iOS 7. */
 }
 
@@ -107,11 +106,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 30%;
 	}
-
+	
 	.sb-width-thin {
 		width: 15%;
 	}
-
+	
 	.sb-width-wide {
 		width: 45%;
 	}
@@ -120,11 +119,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 70%;
 	}
-
+	
 	.sb-width-thin {
 		width: 55%;
 	}
-
+	
 	.sb-width-wide {
 		width: 85%;
 	}
@@ -134,11 +133,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 55%;
 	}
-
+	
 	.sb-width-thin {
 		width: 40%;
 	}
-
+	
 	.sb-width-wide {
 		width: 70%;
 	}
@@ -148,11 +147,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 40%;
 	}
-
+	
 	.sb-width-thin {
 		width: 25%;
 	}
-
+	
 	.sb-width-wide {
 		width: 55%;
 	}
@@ -162,11 +161,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 30%;
 	}
-
+	
 	.sb-width-thin {
 		width: 15%;
 	}
-
+	
 	.sb-width-wide {
 		width: 45%;
 	}
@@ -176,11 +175,11 @@ html.sb-static .sb-slidebar,
 	.sb-slidebar {
 		width: 20%;
 	}
-
+	
 	.sb-width-thin {
 		width: 5%;
 	}
-
+	
 	.sb-width-wide {
 		width: 35%;
 	}
@@ -202,7 +201,7 @@ html.sb-static .sb-slidebar,
 /* --------------------
  * 005 - Helper Classes
  */
-
-.sb-hide {
+ 
+.sb-hide { 
 	display: none; /* Optionally applied to control classes when Slidebars is disabled over a certain width. */
 }
