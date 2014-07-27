@@ -5,8 +5,9 @@
 
 standard-app-packages
 insecure
-bootstrap
 underscore
 iron-router
 accounts-ui-bootstrap-dropdown
 accounts-password
+jquery
+sass

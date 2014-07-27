@@ -1,6 +1,15 @@
 <template name="documents_create">
   <form action="submit">
-    <input type="file" accept="image/*" id="uploadImage" capture="camera" multiple>
-    <button>Create Assignment</button>
+    <fieldset>
+      <label>Assignment Name</label>
+      <input class="name">
+      <label >Assignment Description</label>
+      <input class="description">
+      <label>Select Files</label>
+      <input type="file" accept="image/*" id="uploadImage" capture="camera" multiple>
+      <label></label>
+      <button>Create Assignment</button>
+    </fieldset>
   </form>
+  <div class="complete hidden">UPLOAD COMPLETE</div>
 </template>
