@@ -1,8 +1,11 @@
-<template name="rigtSlide">
-</template>
-
-<template name="welcome">
-  <p>Welcome to the class {{class_name}}</p>
+<template name="chat_slide">
+{{#if document_loaded }}
+  <div class="sb-slidebar sb-left">
+    <p>Welcome to the class {{ document.name }}, {{user_name}} </p>
+    {{ > messages }}
+    {{ > message_input }}
+  </div>
+{{/if}}
 </template>
 
 <template name="messages">

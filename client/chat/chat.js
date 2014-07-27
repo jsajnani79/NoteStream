@@ -2,6 +2,27 @@
  * Templates
  */
 
+
+Template.chat_slide.document_loaded = function () {
+  if (Session.get('documentId').length > 0 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Template.chat_slide.document = function () {
+  var documentId = Session.get('documentId');
+  if (documentId && documentId.length > 0 ) {
+    // get the data object
+    var doc = Documents.findOne({_id: Session.get('documentId')});
+    console.log('your doc:', doc);
+    return doc;
+  } else {
+    return null;
+  }
+}
+
 Template.messages.messages = function (documentId) {
   return Messages.find({documentId : documentId}, { sort: { time: -1 }});
 }
