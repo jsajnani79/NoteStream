@@ -1,10 +1,36 @@
 <template name="layout">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <div id="sb-site">
   <div class="container">
-      {{> header}}
       {{> chat_slide}}
       {{> question_slide}}
+      {{> header}}
     <div id="main" class="row-fluid">
       {{> yield}}
+      		<ul>
+				<li class="sb-toggle-left">Toggle left Slidebar</li>
+				<li class="sb-toggle-right">Toggle right Slidebar</li>
+			</ul>
+    </div>
     </div>
   </div>
+  	<div class="sb-slidebar sb-left sb-style-push">
+		<!-- Your left Slidebar content. -->
+		<p>Just a line of text to demonstrate the push effect.</p>
+	</div>
+	<div class="sb-slidebar sb-right sb-style-overlay">
+		<!-- Your right Slidebar content. -->
+		<p>Just a line of text to demonstrate the overlay effect.</p>
+	</div>
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>		
+	<!-- Slidebars -->
+	<script src="slidebars/slidebars.js"></script>
+	<script>
+		(function($) {
+			$(document).ready(function() {
+				$.slidebars();
+			});
+		}) (jQuery);
+	</script>
 </template>
