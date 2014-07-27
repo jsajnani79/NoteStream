@@ -2,6 +2,10 @@ Template.header.events = {
   'click #toggle_chat' : function (event) {
     console.log('toggle clicked');
     $('#chat_slide').toggleClass('sb-active');
+  },
+  'click #toggle_question' : function (event) {
+    console.log('toggle clicked');
+    $('#question_slide').toggleClass('sb-active');
   }
 }
 
