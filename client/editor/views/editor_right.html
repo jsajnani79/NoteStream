@@ -1,7 +1,9 @@
 <template name="editor_right">
   <h4>Slide Notes</h4>
   {{#each notes}}
+    <div style="background-color:ghostwhite">
     {{> one_note}}
+    </div>
   {{/each}}
 </template>
 
@@ -19,7 +21,9 @@
             {{#if owns_doc}}
             {{> aceEditor}}
             {{else}}
+            <div style="background-color:ghostwhite">
             {{this.textNote}}
+            </div>
             {{/if}}
           </div>
         </div>
@@ -33,6 +37,8 @@
 	<!-- <div id='aceEditor{{this._id}}' class='aceEditor' data-id='{{this._id}}'> -->
   <div id='aceEditor' class='aceEditor' data-id='{{this._id}}'>
 		<!-- add saved text -->
+    <div style="background-color:ghostwhite">
     {{this.textNote}}
+    </div>
 	</div>
 </template>
