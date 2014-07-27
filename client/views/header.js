@@ -1,6 +1,7 @@
 Template.header.events = {
-  'click slide-toggle-left' : function (event) {
-    $('.slidebar').hide();
+  'click #toggle_chat' : function (event) {
+    console.log('toggle clicked');
+    $('#chat_slide').toggleClass('sb-active');
   }
 }
 

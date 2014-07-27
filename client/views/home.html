@@ -1,8 +1,10 @@
 <template name="home">
   <div class="container">
     <div id="main" class="row-fluid">
+      <h2>Here is a list of all your files/projects</h2>
       {{#each documents }}
-        <a href= '/editor/{{_id}}'>Link of document is: {{name}}</a>
+        <a href= '/editor/{{_id}}'>{{name}}</a>
+        <br>
       {{/each}}
     </div>
   </div>

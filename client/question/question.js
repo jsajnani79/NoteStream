@@ -1,5 +1,12 @@
+Template.question_slide.document_loaded = function () {
+  if (Session.get('documentId')) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-Template.questions.questions = function (documentId) {
+Template.question_slide.questions = function (documentId) {
   return questions.find({documentId : documentId}, { sort: { time: -1 }});
 }
 
@@ -14,10 +21,9 @@ Template.question_input.events = {
 
       if (question.value != '') {
         Questions.insert({
-          name: name,
           userId: Meteor.userId(),
           documentId: Session.get('documentId'),
-          question: question.value,
+          test: question.value,
           time: Date.now(),
         });
 
