@@ -16,6 +16,10 @@ Documents = new Meteor.Collection("documents", {
           type: Date,
           label: "Created at time",
         },
+        createdBy: {
+          type: String,
+          label: "Created By UserID"
+        },
         contributors: {
           type: [String],
           label: "Programs under this company",
@@ -27,7 +31,8 @@ Documents = new Meteor.Collection("documents", {
           min: 0
         },
         encodedImg: {
-          type: [String]
+          type: [String],
+          optional: true
         }
     }
 });
