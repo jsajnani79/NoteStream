@@ -1,10 +1,41 @@
 <template name="layout">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <div id="sb-site">
   <div class="container">
-    {{> header}}
-    {{> chat_slide}}
-    {{> question_slide}}
+     <!--  {{> chat_slide}}
+      {{> question_slide}} -->
+      {{> header}}
+      <div class="row">
+		<div class="sb-toggle-left col span2">Folders & Chat</div>
+		<div class="sb-toggle-right col span2">Questions</div>
+	  </div>
     <div id="main" class="row-fluid">
-      {{> yield}}
+      {{> yield}}      		
+    </div>
     </div>
   </div>
+
+  	<!-- Your left Slidebar content. -->
+  	<div class="sb-slidebar sb-left sb-style-push">
+		{{> editor_left}}
+		{{> chat_slide}}
+	</div>
+
+	<!-- Your right Slidebar content. -->
+	<div class="sb-slidebar sb-right sb-style-overlay">
+		{{> question_slide}}
+	</div>
+	
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>		
+	<!-- Slidebars -->
+	<script src="slidebars/slidebars.js"></script>
+	<script>
+		(function($) {
+			$(document).ready(function() {
+				$.slidebars();
+			});
+		}) (jQuery);
+	</script>
 </template>
+   

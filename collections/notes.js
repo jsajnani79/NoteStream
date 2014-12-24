@@ -2,7 +2,7 @@ Notes = new Meteor.Collection("notes", {
     schema: {
         documentId: {
           type: String,
-          label: "Associate docuemnt ID"
+          label: "Associate document ID"
         },
         createdBy: {
           type: String,
@@ -11,6 +11,10 @@ Notes = new Meteor.Collection("notes", {
         createdAt: {
           type: Date,
           label: "Created at Time"
+        },
+        modifiedAt: {
+          type: Date,
+          label: "Last modified at Time"
         },
         sharedWith: {
           type: [String],
@@ -35,9 +39,10 @@ Notes.allow({
     return !! userId;
   },
   update: function(userId, doc) {
-    if (userId === doc.createdBy)
-      return !! userId;
-    else return false;
+    // if (userId === doc.createdBy)
+      // return !! userId;
+    // else return false;
+    return true;
   },
   remove: function(userId, doc) {
     if (doc.createdBy == userId)

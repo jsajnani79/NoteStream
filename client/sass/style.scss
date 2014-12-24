@@ -27,3 +27,25 @@ img {
 .message_entry {
   padding-left:10px;
 }
+
+.questions_container {
+  padding-left:10px;
+  background-color: #0099FF;
+}
+
+.inc {
+  cursor: pointer;
+}
+
+.done {
+  cursor: pointer;
+}
+
+//Editor right
+.docListItem {
+  list-style-type: none
+}
+
+.active {
+  color: blue
+}

@@ -22,4 +22,14 @@ Template.editor_right.helpers({
 	notes: function() {
 		return Notes.find()
 	}
+});
+
+Template.docListItem.helpers({
+  cssClass: function() {
+    console.log(this);
+    // var id_path = "/editor/" + {{this.id}};
+    // console.log("ID_PATH", id_path);
+    console.log(Session.documentID);
+    // if(this._id == )
+  }
 })

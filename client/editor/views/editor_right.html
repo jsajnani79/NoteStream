@@ -1,7 +1,9 @@
 <template name="editor_right">
   <h4>Slide Notes</h4>
   {{#each notes}}
+    <div style="background-color:ghostwhite">
     {{> one_note}}
+    </div>
   {{/each}}
 </template>
 
@@ -13,11 +15,28 @@
             {{this.createdBy}}
           </a>
         </div>
-        <div id="collapse{{this._id}}" class="accordion-body collapse in">
+        <div id="collapse{{this._id}}" class="accordion-body collapse in" >
           <div class="accordion-inner">
-            {{this.textNote}}
+            <div style="background-color:ghostwhite">
+            <!-- {{#if owns_doc}} -->
+              {{> aceEditor}}
+            <!-- {{else}} -->
+              <!-- {{this.textNote}} -->
+            <!-- {{/if}} -->
+            </div>
           </div>
         </div>
       </div>
+    </div>  
+</template>
+
+<template name="aceEditor">
+	<!-- for each person on doc -->
+	<!-- show name, icon, dropdown for language choice -->
+	<div id='aceEditor{{this._id}}' class='aceEditor' data-id='{{this._id}}'>
+  <!-- <div id='aceEditor' class='aceEditor' data-id='{{this._id}}'>  -->
+    <div style="background-color:ghostwhite">
+      {{this.textNote}} 
     </div>
+  </div>
 </template>

@@ -1,0 +1,16 @@
+.btn-doc{
+	color: #000;
+    background: url(../lib/doc_test.jpg) no-repeat bottom center scroll;
+    border: 2px solid black;
+    min-height: 150px;
+    min-width: 100px;
+    max-height: 250px;
+    max-width: 100px;
+    vertical-align: bottom;
+    text-align: center bottom;
+}
+
+.aceEditor{
+	width: 200px;
+	height: 150px;
+}
